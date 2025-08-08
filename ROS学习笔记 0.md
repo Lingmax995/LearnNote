@@ -1,5 +1,17 @@
-ROS = 通信机制 + 开发工具 + 应用功能 + 生态系统
+**ROS全称Robot Operating System(机器人操作系统)**
 
+- ROS是适用于机器人的**开源**元操作系统
+- ROS = 通信机制 + 开发工具 + 应用功能 + 生态系统
+#### ROS的设计目标
+1. 代码复用
+2. 分布式
+3. 松耦合
+4. 精简
+5. 语言独立性
+6. 易于测试
+7. 大型应用
+8. 丰富的组件工具包
+9. 免费开源
 #### ROS 核心概念
 
 ##### 节点和节点管理器
@@ -25,7 +37,7 @@ ROS = 通信机制 + 开发工具 + 应用功能 + 生态系统
 1. 使用客户端/服务器(C/S)模型，客户端发送请求数据，服务器完成处理后返回应答数据
 2. 使用编程语言无关的.srv文件定义请求和应答数据结构，编译过程中生成对应的代码文件。
    
-   ![[Pasted image 20250727223005.png]]
+   ![话题和服务](话题和服务的区别.png)
 
 ##### 参数
 - 参数(Parameter)--全局共享字典
@@ -75,3 +87,16 @@ name: 'turtle2'"
 `rosbag record -a O cmd_record`
 7. 话题复现
 `rosbag play cmd_record.bag`
+
+
+参考推荐书目
+- 《ROS By Example》
+- 《Mastering ROS for Robotics Programming》
+- 《ROS Robotics Programming》
+- 《A Gentle Introduction to ROS》
+- 《Effective Robotics Programming with ROS》
+- ![参考资料](参考资料.jpg)
+学习资料：
+深蓝学院ROS理论与实践
+古月居ROS入门21讲
+Autolabor初级教程 ROS 机器人入门
