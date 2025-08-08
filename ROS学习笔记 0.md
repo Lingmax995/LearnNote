@@ -37,7 +37,7 @@
 1. 使用客户端/服务器(C/S)模型，客户端发送请求数据，服务器完成处理后返回应答数据
 2. 使用编程语言无关的.srv文件定义请求和应答数据结构，编译过程中生成对应的代码文件。
    
-   ![话题和服务](话题和服务的区别.png)
+   ![话题和服务](img/话题和服务的区别.png)
 
 ##### 参数
 - 参数(Parameter)--全局共享字典
@@ -95,7 +95,7 @@ name: 'turtle2'"
 - 《ROS Robotics Programming》
 - 《A Gentle Introduction to ROS》
 - 《Effective Robotics Programming with ROS》
-- ![参考资料](参考资料.jpg)
+- ![参考资料](img/参考资料.jpg)
 学习资料：
 深蓝学院ROS理论与实践
 古月居ROS入门21讲
