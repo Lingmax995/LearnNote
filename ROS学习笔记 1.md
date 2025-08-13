@@ -4,6 +4,12 @@
 - devel ： 开发空间 
 - install ： 安装空间
 
+核心模块：
+- ROS基础（工作空间创建、通信编程）
+- 机器人系统设计（建模、仿真）
+- 机器人感知（视觉、语音处理）
+- 高级应用（SLAM、机械臂控制）
+- ROS 2.**0新特性**
 ### 创建工作空间和功能包
 
 #### 创建工作空间
@@ -21,6 +27,7 @@ catkin_make install
 ```
 3. 设置环境变量
 `source devel/setup.bash`
+永久设置：将环境变量添加到~/.bashrc或~/.zshrc配置文件中
 4. 检查环境变量
 `echo $ROS_PACKAGE_PATH`
 
@@ -39,6 +46,21 @@ source ~/catkin_ws/devel/setup.bash
 
 注：同意工作空间下不允许存在同名功能包
 不同空间下，允许存在同名功能包
+
+- package的基本结构
+	1. include/package_name/：此目录包含了你所需要库的头文件。
+		不要忘记导出功能包清单，因为它们还会被其他功能包所使用。
+	2. msg/：如果你要开发非标准消息，请把文件放在这里。
+	3. scripts/：其中包括Bash、Python或任何其他脚本的可执行脚本文件。
+	4. src/：这是存储程序源文件的地方。
+		你可能会为节点创建一个文件夹或按照你希望的方式去组织它。
+	5. srv/：这表示的是服务（srv）类型。
+	6. CMakeLists.txt：这是CMake的生成文件。
+	7. package.xml：这是功能包清单文件。
+
+- 查看命令：使用env | grep ros命令可以过滤显示所有ROS相关的环境变量
+- 关键变量：最需要关注的是$ROS_PACKAGE_PATH环境变量，它决定了功能包的查找路径顺序
+- 路径组成：该变量包含多个路径，用冒号分隔，如/home/hcx/catkin_ws/src:/opt/ros/kinetic/share
 
 ### 发布者Publisher 的编程实现
 
