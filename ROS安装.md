@@ -43,10 +43,10 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 
 3.安装ROS
 ```
-sudo apt update
+sudo apt-get update
 ```
 ```
-sudo apt install ros-noetic-desktop-full
+sudo apt-get install ros-noetic-desktop-full
 ```
 
 4.初始化rosdep
