@@ -16,30 +16,43 @@
 ### 创建工作空间和功能包
 
 #### 创建工作空间
+
+编译位置：**所有编译操作都必须在工作空间根目录下进行**
+
 1. 创建工作空间
 ```
 mkdir -p catkin_ws/src
 cd src
 catkin_init_workspace
 ```
-2. 编译工作空间
+- 注意事项：
+  
+    建议同步操作时使用暂停功能
+
+    所有ROS开发文件都应组织在工作空间内
+
+    工作空间是ROS项目的基础容器
+
+1. 编译工作空间
 ```
 cd catkin_ws
 catkin_make
 catkin_make install
 ```
-3. 设置环境变量
+1. 设置环境变量
 `source devel/setup.bash`
 永久设置：将环境变量添加到~/.bashrc或~/.zshrc配置文件中
-4. 检查环境变量
+1. 检查环境变量
 `echo $ROS_PACKAGE_PATH`
 
 #### 创建功能包
 1. 创建功能包
 ```
 cd src
-catkin_create_pkg test_pkg std_msg rospy roscpp
+catkin_create_pkg test_pkg std_msgs rospy roscpp
 ```
+- std_msgs(标准消息类型)
+
 2. 编译功能包
 ```
 cd ~/catkin_ws
@@ -61,9 +74,19 @@ source ~/catkin_ws/devel/setup.bash
 	6. CMakeLists.txt：这是CMake的生成文件。
 	7. package.xml：这是功能包清单文件。
 
-- 查看命令：使用env | grep ros命令可以过滤显示所有ROS相关的环境变量
-- 关键变量：最需要关注的是$ROS_PACKAGE_PATH环境变量，它决定了功能包的查找路径顺序
-- 路径组成：该变量包含多个路径，用冒号分隔，如/home/hcx/catkin_ws/src:/opt/ros/kinetic/share
+  - 查看命令：使用env | grep ros命令可以过滤显示所有ROS相关的环境变量
+  - 关键变量：最需要关注的是$ROS_PACKAGE_PATH环境变量，它决定了功能包的查找路径顺序
+  - 路径组成：该变量包含多个路径，用冒号分隔，如/home/hcx/catkin_ws/src:/opt/ros/kinetic/share
+
+
+- 工作空间的覆盖机制
+  - 同名功能包规则：同一个工作空间下不允许存在同名功能包，但不同工作空间下允许存在同名功能包
+  - 查找机制：ROS运行时通过overlaying机制（工作空间覆盖机制）决定同名功能包的查找顺序
+  - 优先级原则：系统会按照特定顺序查找工作空间中的功能包，优先使用先找到的功能包版本
+  - 查找命令：`rospack find roscpp_tutorials`可以显示功能包的具体路径
+
+
+
 
 ### 发布者Publisher 的编程实现
 
