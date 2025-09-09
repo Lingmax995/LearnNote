@@ -38,3 +38,76 @@ catkin_make -DCMAKE_EXPORT_COMPILE_COMMANDS=Yes
 
         "version": 4
     }
+
+
+#### ROS+VSCODE
+
+使用vscode打开工作空间会输出一个compile_commands.json文件在ROS工作空间的build文件夹下面
+
+在命令行中输入
+
+```
+catkin_make -DCMAKE_EXPORT_COMPILE_COMMANDS=Yes
+
+```
+
+修改.json文件
+
+```
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+
+    "version": 4
+}
+
+```
+
+#### catkin_make设置
+
+vscode没有内置make功能，需要借助Task功能进行配置
+
+Ctrl+shift+P进入命令模式，键入tasks: Configure Task
+
+此时会在.vscode文件夹下面自动生成task.json文件，如下所示
+
+```
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "catkin_make", //代表提示的描述性信息
+            "type": "shell",  //可以选择shell或者process,如果是shell代码是在shell里面运行一个命令，如果是process代表作为一个进程来运行
+            "command": "catkin_make",//这个是我们需要运行的命令
+            "args": [],//如果需要在命令后面加一些后缀，可以写在这里，比如-DCATKIN_WHITELIST_PACKAGES=“pac1;pac2”
+            "group": {"kind":"build","isDefault":true},//代表将我们定义的这个task添加到build组里面，这样就可以中Ctrl+Shift+B快捷键来找到编译命令
+            "presentation": {
+                "reveal": "always"//可选always或者silence，代表是否输出信息
+            },
+            "problemMatcher": "$msCompile"
+        },
+    ]
+}
+
+
+```
+
+参考博客：https://blog.csdn.net/weixin_35695879/article/details/85254422
+
+rviz
+rosrun rviz rviz -d $(rospack find turtle_tf)/rviz/turtle_rviz.rviz
+
+没有yaml文件
+udo apt install python-is-python3
