@@ -1,5 +1,4 @@
-## ROS基础（工作空间+publish）
-
+## ROS基础（工作空间+话题编程）
 
 工作空间是一个存放工程开发相关文件的文件夹
 - src 代码空间
@@ -42,6 +41,7 @@ catkin_make install
 1. 设置环境变量
 `source devel/setup.bash`
 永久设置：将环境变量添加到~/.bashrc或~/.zshrc配置文件中
+CTRL+h ： 显示隐藏文件夹
 1. 检查环境变量
 `echo $ROS_PACKAGE_PATH`
 
@@ -81,9 +81,12 @@ source ~/catkin_ws/devel/setup.bash
 
 - 工作空间的覆盖机制
   - 同名功能包规则：同一个工作空间下不允许存在同名功能包，但不同工作空间下允许存在同名功能包
-  - 查找机制：ROS运行时通过overlaying机制（工作空间覆盖机制）决定同名功能包的查找顺序
+  - 查找机制：**ROS运行时通过overlaying机制（工作空间覆盖机制）决定同名功能包的查找顺序**
+
+		env | grep ros //查看ros 的相关环境变量
   - 优先级原则：系统会按照特定顺序查找工作空间中的功能包，优先使用先找到的功能包版本
-  - 查找命令：`rospack find roscpp_tutorials`可以显示功能包的具体路径
+  - 查找命令：`rospack find roscpp_tutorials`可以查看系统路径下的功能包
+  - `catkin_ws rospack find roscpp_tutorials`查看工作空间的功能包
 
 
 
@@ -110,10 +113,7 @@ catkin_create_pkg learning_topic roscpp rospy std_msgs geometry_msgs turtlesim
 	- 按照一定频率发布信息
 
 #### 配置发布者代码编译规则
-```
-add_executable(velocity_publisher src/velocity_publisher.cpp)
-target_link_libraries(velocity_publisher ${catkin_LIBRARIES})
-```
+![话题cmakelist](/img/话题cmakelist.png)
 #### 编译并运行
 
 ```
@@ -194,7 +194,12 @@ rostopic echo /Hello
 echo -e "\u56DE\u6765\u4E86"
 
 ```
-![[Pasted image 20250729163723.png]]
+![hello实例](/img/hello实例.png)
 
 
+#### pyhton实例，用自己创建好的msg文件，进行发布/命令
 
+1. 创建自定义的msg文件
+2. 在CMakeLists.txt 和 package.xml 里加好依赖并编译
+![msg话题依赖](/img/msg话题依赖.png)
+3. 编写发布者节点和订阅者节点
