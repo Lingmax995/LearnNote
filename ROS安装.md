@@ -28,7 +28,7 @@ virtualBox安装教程可以参考[https://blog.csdn.net/2302_77915576/article/d
 1.配置ubuntu软件和更新
 **首先打开“软件和更新”对话框**
 前四个是勾选，后面选择合适的镜像源
-![[Pasted image 20250709215415.png]]
+![虚拟机软件和更新.png](./img/虚拟机软件和更新.png)
 
 2.添加ROS软件源
 这里是官方默认的
