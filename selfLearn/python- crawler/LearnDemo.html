@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>testLearnDemo</title>
+        <link rel="stylesheet" href="style.css" href = "style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h6>文本内容：使用 &lt;p&gt; 标签定义段落，&lt;h1&gt; 到 &lt;h6&gt;标签定义标题，
+            &lt;strong&gt;、&lt;del&gt; 和 &lt;em&gt;标签可以用于强调文本。</h6>
+        <h1>这是一个一级标题</h1>
+        <h2>这是一个二级标题</h2>
+        <h3>这是一个三级标题</h3>
+        <h4>这是一个四级标题</h4>
+        <h5>这是一个五级标题</h5>
+        <h6>这是一个六级标题</h6>
+        <p>这是一个段落。</p>
+        <p><strong>重要信息：</strong>这是一个重要的内容。</p>
+        <p><em>强调信息：</em>这是一个需要强调的内容。</p>
+        <p><u>下划线文本：</u>这是一个带有下划线的文本。</p>
+        <p><del>删除线文本：</del>这是一个带有删除线的文本。</p>
+        <p><mark>高亮文本：</mark>这是一个被高亮显示的文本。</p>
+        <p><small>小号文本：</small>这是一个小号字体的文本。</p>
+        <p><ins>插入文本：</ins>这是一个被插入的文本。</p>
+        <p>这是一个包含<a href="https://www.example.com">超链接</a>的段落。</p>
+        <p>这是一个包含<img src="image.jpg" alt="示例图片">的段 落。</p>
+        <p>这是一个包含<br>换行符的段落。</p>  
+        <p>这是一个包含&nbsp;空格的段落。</p>
+        <p> 使用 &lt;!-- 注释内容 --&gt; 添加注释，不会在浏览器中显示。</p>
+        <hr>
+        <h6>列表：使用 &lt;ul&gt; 和 &lt;ol&gt; 标签定义无序列表和有序列表，&lt;li&gt;
+             标签定义列表项。</h6>
+
+            <ul>
+                <li>无序项目1</li>
+                <li>无序项目2</li>
+            </ul>
+
+            <ol>
+                <li>有序项目1</li>
+                <li>有序项目2</li>
+            </ol>
+            <hr>
+        <h6>表格： 使用 &lt;table&gt; 、&lt;tr&gt; 、&lt;td&gt; 、&lt;th&gt;  等标签创建表格，
+            &lt;table> 是表格标签的根元素，然后是 &lt;tr> 表格的行标签，
+                在 &lt;tr&gt; 内部是 &lt;td&gt; 与 &lt;th&gt;</h6>
+            
+        <table>
+            <tr>
+                <th>列A</th>
+                <th>列B</th>
+                <th>列C</th>
+            </tr>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+        </table>
+    <hr>
+    <h6>表单：使用 &lt;form&gt; 标签创建表单，&lt;input&gt;、&lt;textarea&gt;、&lt;select&gt;
+         等标签用于不同类型的输入控件。</h6>
+            <h2>用户注册</h2>
+            <form action="/submit" method="post">
+                <label for="username">用户名：</label>
+                <input type="text"><br><br>
+
+                <label for="password">密码：</label>
+                <input type="password"><br><br>
+
+                <label for="email">电子邮件地址：</label>
+                <input type="text"><br><br>
+
+                <label for="age">年龄：</label>
+                <input type="number" width="5"><br><br>
+
+                <label>性别：</label>
+                <input type="radio" name="gender" value="male"> 男
+                <input type="radio" name="gender" value="female"> 女<br><br>
+
+                <label>喜欢的编程语言：</label>
+                <input type="checkbox" name="languages" value="python"> Python
+                <input type="checkbox" name="languages" value="javascript"> JavaScript
+                <input type="checkbox" name="languages" value="java"> Java
+                <input type="checkbox" name="languages" value="cpp"> C++<br><br>
+
+                <input type="submit" value="提交">
+            </form>
+            <hr>
+            <h6>多媒体元素：使用 &lt;img&gt; 标签插入   
+                图片，&lt;audio&gt; 和 &lt;video&gt; 标签插入音频和视频。</h6>
+            <h2>多媒体示例</h2>
+            <h3>图片</h3>
+            <img src="https://www.example.com/image.jpg" alt="示例图片" width="300"><br><br>
+            <h3>音频</h3>
+            <audio controls>
+                <source src="https://www.example.com/audio.mp3" type="audio/mpeg">
+                您的浏览器不支持音频元素。
+            </audio><br><br>
+            <h3>视频</h3>
+            <video width="320" height="240" controls>
+                <source src="https://www.example.com/video.mp4" type="video/mp4">
+                您的浏览器不支持视频元素。
+            </video>
+            <hr>
+            <h6>语义化标签：HTML5 引入了许多语义化标签，如 &lt;header&gt;、&lt;nav&gt;、&lt;section&gt;、
+                 &lt;article&gt;、&lt;aside&gt; 和 &lt;footer&gt;，用于更清晰地定义网页结构。</h6>
+            <header>
+                <h1>网站标题</h1>
+                <nav>
+                    <a href="#home">首页</a> |
+                    <a href="#about">关于我们</a> |
+                    <a href="#services">服务</a> |
+                    <a href="#contact">联系我们</a>
+                </nav>
+            </header>
+            <section id="home">
+                <h2>欢迎来到我们的网站</h2>
+                <p>这是首页的内容。</p>
+            </section>
+            <section id="about">
+                <h2>关于我们</h2>
+                <p>这是关于我们的内容。</p> 
+            </section>
+            <section id="services">
+                <h2>我们的服务</h2>
+                <p>这是服务的内容。</p>
+            </section>
+            <aside>
+                <h2>侧边栏</h2>
+                <p>这是一些额外的信息。</p>
+            </aside>
+            <footer>
+                <p>版权所有 &copy; 2024</p> 
+            </footer>
+            <hr>
+            <h6>注释：使用 &lt;!-- 注释内容 --&gt; 添加注释，不会在浏览器中显示。</h6>
+            <p>这是一个段落。 <!-- 这是一个注释，不会显示在浏览器中 --></p>
+            <hr>
+
+
+            <!-- 著作权归极客侠 GeeksMan所有 
+            基于GPL 3.0协议
+            原文链接：https://docs.geeksman.com/front-end/1.front-end-html.html -->
+    </body>
+</html>
