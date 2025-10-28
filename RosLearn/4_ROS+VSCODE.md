@@ -111,3 +111,17 @@ rosrun rviz rviz -d $(rospack find turtle_tf)/rviz/turtle_rviz.rviz
 
 没有yaml文件
 udo apt install python-is-python3
+
+----
+
+参考bilibili机器人工匠阿杰
+
+终端工具terminator快捷键
+
+CTRL+SHIIFT+E   左右分屏
+
+CTRL+SHIIFT+O   上下分屏
+
+CTRL+SHIIFT+W   关闭分屏
+
+ALT + 方向键    移动焦点
