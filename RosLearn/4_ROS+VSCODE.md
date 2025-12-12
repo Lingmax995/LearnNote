@@ -118,6 +118,12 @@ udo apt install python-is-python3
 
 终端工具terminator快捷键
 
+sudo apt install terminator
+
+如果和CTRL+SHIIFT+E 冲突，终端输入ibus-setup，在表情符号中调整快捷键
+
+
+
 CTRL+SHIIFT+E   左右分屏
 
 CTRL+SHIIFT+O   上下分屏
