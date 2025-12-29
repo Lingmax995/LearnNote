@@ -33,3 +33,7 @@
 - `head`/`tail`：查看文件头/尾部（`tail -f` 实时跟踪日志）
 - `grep`：文本搜索（`-i` 忽略大小写，`-r` 递归目录）
 - `find`：按条件查找文件（如 `find /home -name "*.log"`
+
+
+## VMware Tools 安装详细教程（Ubuntu 虚拟机）
+https://blog.csdn.net/fuhanghang/article/details/150951043?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-150951043-blog-140187119.235^v43^pc_blog_bottom_relevance_base4&spm=1001.2101.3001.4242.2&utm_relevant_index=3

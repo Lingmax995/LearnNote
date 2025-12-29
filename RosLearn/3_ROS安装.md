@@ -23,6 +23,10 @@ virtualBox安装教程可以参考[https://blog.csdn.net/2302_77915576/article/d
 
 目前是20.04.06
 
+
+虚拟机安装语言选择上没有continue的话，可以按alt+F7
+
+
 ##### ROS安装步骤
 
 1.配置ubuntu软件和更新
